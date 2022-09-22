@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D5C18CA28DCA82000C6933D /* LiftListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C18C928DCA82000C6933D /* LiftListView.swift */; };
+		3D5C18CF28DCA95D00C6933D /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C18CE28DCA95D00C6933D /* Condition.swift */; };
 		3D6E800E28DC84F70001C108 /* JustLiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E800D28DC84F70001C108 /* JustLiftApp.swift */; };
-		3D6E801028DC84F70001C108 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E800F28DC84F70001C108 /* ContentView.swift */; };
 		3D6E801228DC84F80001C108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D6E801128DC84F80001C108 /* Assets.xcassets */; };
 		3D6E801528DC84F80001C108 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D6E801428DC84F80001C108 /* Preview Assets.xcassets */; };
 		3D6E801F28DC84F80001C108 /* JustLiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E801E28DC84F80001C108 /* JustLiftTests.swift */; };
@@ -34,9 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D5C18C928DCA82000C6933D /* LiftListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftListView.swift; sourceTree = "<group>"; };
+		3D5C18CE28DCA95D00C6933D /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
 		3D6E800A28DC84F70001C108 /* JustLift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustLift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6E800D28DC84F70001C108 /* JustLiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustLiftApp.swift; sourceTree = "<group>"; };
-		3D6E800F28DC84F70001C108 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3D6E801128DC84F80001C108 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D6E801428DC84F80001C108 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D6E801A28DC84F80001C108 /* JustLiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustLiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +73,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D5C18C728DCA73700C6933D /* LiftList */ = {
+			isa = PBXGroup;
+			children = (
+				3D5C18C928DCA82000C6933D /* LiftListView.swift */,
+			);
+			path = LiftList;
+			sourceTree = "<group>";
+		};
+		3D5C18C828DCA74400C6933D /* LiftDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LiftDetail;
+			sourceTree = "<group>";
+		};
+		3D5C18CB28DCA90F00C6933D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3D5C18CE28DCA95D00C6933D /* Condition.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3D6E800128DC84F70001C108 = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +119,10 @@
 		3D6E800C28DC84F70001C108 /* JustLift */ = {
 			isa = PBXGroup;
 			children = (
+				3D5C18C728DCA73700C6933D /* LiftList */,
+				3D5C18C828DCA74400C6933D /* LiftDetail */,
+				3D5C18CB28DCA90F00C6933D /* Model */,
 				3D6E800D28DC84F70001C108 /* JustLiftApp.swift */,
-				3D6E800F28DC84F70001C108 /* ContentView.swift */,
 				3D6E801128DC84F80001C108 /* Assets.xcassets */,
 				3D6E801328DC84F80001C108 /* Preview Content */,
 			);
@@ -257,8 +284,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D6E801028DC84F70001C108 /* ContentView.swift in Sources */,
 				3D6E800E28DC84F70001C108 /* JustLiftApp.swift in Sources */,
+				3D5C18CF28DCA95D00C6933D /* Condition.swift in Sources */,
+				3D5C18CA28DCA82000C6933D /* LiftListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
