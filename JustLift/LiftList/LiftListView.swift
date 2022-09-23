@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct LiftListView: View {
+    
+    @State var list: [LiftLog] = LiftLog.list
+    let layout: [GridItem] = [
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible())]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        LazyVGrid(columns: layout) {
+            ForEach(list) { item in
+                HStack {
+                    Text(item.condition.emoji)
+                    IntensityListCell(liftLog: item)
+                        .frame(height: 30)
+                }
+
+            }
+        }
     }
 }
 
