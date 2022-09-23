@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3D5C18CA28DCA82000C6933D /* LiftListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C18C928DCA82000C6933D /* LiftListView.swift */; };
 		3D5C18CF28DCA95D00C6933D /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C18CE28DCA95D00C6933D /* Condition.swift */; };
+		3D5C18D128DCB2DA00C6933D /* LiftLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C18D028DCB2DA00C6933D /* LiftLog.swift */; };
+		3D5C18D328DCB50E00C6933D /* IntensityListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C18D228DCB50E00C6933D /* IntensityListCell.swift */; };
+		3D5C18D528DCB63C00C6933D /* Intensity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C18D428DCB63C00C6933D /* Intensity.swift */; };
 		3D6E800E28DC84F70001C108 /* JustLiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E800D28DC84F70001C108 /* JustLiftApp.swift */; };
 		3D6E801228DC84F80001C108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D6E801128DC84F80001C108 /* Assets.xcassets */; };
 		3D6E801528DC84F80001C108 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D6E801428DC84F80001C108 /* Preview Assets.xcassets */; };
@@ -37,6 +40,9 @@
 /* Begin PBXFileReference section */
 		3D5C18C928DCA82000C6933D /* LiftListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftListView.swift; sourceTree = "<group>"; };
 		3D5C18CE28DCA95D00C6933D /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
+		3D5C18D028DCB2DA00C6933D /* LiftLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftLog.swift; sourceTree = "<group>"; };
+		3D5C18D228DCB50E00C6933D /* IntensityListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntensityListCell.swift; sourceTree = "<group>"; };
+		3D5C18D428DCB63C00C6933D /* Intensity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intensity.swift; sourceTree = "<group>"; };
 		3D6E800A28DC84F70001C108 /* JustLift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustLift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6E800D28DC84F70001C108 /* JustLiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustLiftApp.swift; sourceTree = "<group>"; };
 		3D6E801128DC84F80001C108 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				3D5C18C928DCA82000C6933D /* LiftListView.swift */,
+				3D5C18D228DCB50E00C6933D /* IntensityListCell.swift */,
 			);
 			path = LiftList;
 			sourceTree = "<group>";
@@ -92,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				3D5C18CE28DCA95D00C6933D /* Condition.swift */,
+				3D5C18D028DCB2DA00C6933D /* LiftLog.swift */,
+				3D5C18D428DCB63C00C6933D /* Intensity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,7 +294,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D6E800E28DC84F70001C108 /* JustLiftApp.swift in Sources */,
+				3D5C18D528DCB63C00C6933D /* Intensity.swift in Sources */,
+				3D5C18D328DCB50E00C6933D /* IntensityListCell.swift in Sources */,
 				3D5C18CF28DCA95D00C6933D /* Condition.swift in Sources */,
+				3D5C18D128DCB2DA00C6933D /* LiftLog.swift in Sources */,
 				3D5C18CA28DCA82000C6933D /* LiftListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
