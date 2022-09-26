@@ -18,6 +18,7 @@
 		3D6E801F28DC84F80001C108 /* JustLiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E801E28DC84F80001C108 /* JustLiftTests.swift */; };
 		3D6E802928DC84F80001C108 /* JustLiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E802828DC84F80001C108 /* JustLiftUITests.swift */; };
 		3D6E802B28DC84F80001C108 /* JustLiftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E802A28DC84F80001C108 /* JustLiftUITestsLaunchTests.swift */; };
+		3D7D175928DDF9CC0093FA00 /* LiftListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D175828DDF9CC0093FA00 /* LiftListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		3D6E802428DC84F80001C108 /* JustLiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustLiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6E802828DC84F80001C108 /* JustLiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustLiftUITests.swift; sourceTree = "<group>"; };
 		3D6E802A28DC84F80001C108 /* JustLiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustLiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3D7D175828DDF9CC0093FA00 /* LiftListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +84,8 @@
 		3D5C18C728DCA73700C6933D /* LiftList */ = {
 			isa = PBXGroup;
 			children = (
-				3D5C18C928DCA82000C6933D /* LiftListView.swift */,
-				3D5C18D228DCB50E00C6933D /* IntensityListCell.swift */,
+				3D7D175728DDF9BB0093FA00 /* ViewModel */,
+				3D7D175628DDF9980093FA00 /* View */,
 			);
 			path = LiftList;
 			sourceTree = "<group>";
@@ -161,6 +163,23 @@
 				3D6E802A28DC84F80001C108 /* JustLiftUITestsLaunchTests.swift */,
 			);
 			path = JustLiftUITests;
+			sourceTree = "<group>";
+		};
+		3D7D175628DDF9980093FA00 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3D5C18C928DCA82000C6933D /* LiftListView.swift */,
+				3D5C18D228DCB50E00C6933D /* IntensityListCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3D7D175728DDF9BB0093FA00 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3D7D175828DDF9CC0093FA00 /* LiftListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +316,7 @@
 				3D5C18D528DCB63C00C6933D /* Intensity.swift in Sources */,
 				3D5C18D328DCB50E00C6933D /* IntensityListCell.swift in Sources */,
 				3D5C18CF28DCA95D00C6933D /* Condition.swift in Sources */,
+				3D7D175928DDF9CC0093FA00 /* LiftListViewModel.swift in Sources */,
 				3D5C18D128DCB2DA00C6933D /* LiftLog.swift in Sources */,
 				3D5C18CA28DCA82000C6933D /* LiftListView.swift in Sources */,
 			);

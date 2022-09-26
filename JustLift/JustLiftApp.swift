@@ -11,7 +11,8 @@ import SwiftUI
 struct JustLiftApp: App {
     var body: some Scene {
         WindowGroup {
-            LiftListView()
+            let vm = LiftListViewModel()
+            LiftListView(viewModel: vm)
         }
     }
 }
