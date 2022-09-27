@@ -30,12 +30,16 @@ struct LiftListView: View {
                                 let items = viewModel.listDic[key] ?? []
                                 let orderedItmes = viewModel.orderItems(items)
                                 ForEach(orderedItmes) { item in
-                                    HStack {
-                                        Text(item.condition.emoji)
-                                        IntensityListCell(liftLog: item)
-                                            .frame(height: 20)
-                                    }
                                     
+                                    NavigationLink {
+                                        LiftDetailView(liftLog: item)
+                                    } label: {
+                                        HStack {
+                                            Text(item.condition.emoji)
+                                            IntensityListCell(liftLog: item)
+                                                .frame(height: 20)
+                                        }
+                                    }
                                 }
                             } header: {
                                 Text(viewModel.formattedSectionTitle(key))
