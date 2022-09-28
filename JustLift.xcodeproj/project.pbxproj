@@ -21,6 +21,8 @@
 		3D7D175928DDF9CC0093FA00 /* LiftListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D175828DDF9CC0093FA00 /* LiftListViewModel.swift */; };
 		3DC300EF28E309680051DC4B /* LiftDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC300EE28E309680051DC4B /* LiftDetailView.swift */; };
 		3DC300F228E339F60051DC4B /* LiftDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC300F128E339F60051DC4B /* LiftDetailViewModel.swift */; };
+		3DC300F628E362A10051DC4B /* LiftCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC300F528E362A10051DC4B /* LiftCreateView.swift */; };
+		3DC300F928E3670F0051DC4B /* LiftCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC300F828E3670F0051DC4B /* LiftCreateViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		3D7D175828DDF9CC0093FA00 /* LiftListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftListViewModel.swift; sourceTree = "<group>"; };
 		3DC300EE28E309680051DC4B /* LiftDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftDetailView.swift; sourceTree = "<group>"; };
 		3DC300F128E339F60051DC4B /* LiftDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftDetailViewModel.swift; sourceTree = "<group>"; };
+		3DC300F528E362A10051DC4B /* LiftCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftCreateView.swift; sourceTree = "<group>"; };
+		3DC300F828E3670F0051DC4B /* LiftCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftCreateViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,7 @@
 		3D6E800C28DC84F70001C108 /* JustLift */ = {
 			isa = PBXGroup;
 			children = (
+				3DC300F328E362830051DC4B /* LiftCreate */,
 				3D5C18C728DCA73700C6933D /* LiftList */,
 				3D5C18C828DCA74400C6933D /* LiftDetail */,
 				3D5C18CB28DCA90F00C6933D /* Model */,
@@ -200,6 +205,31 @@
 			isa = PBXGroup;
 			children = (
 				3DC300F128E339F60051DC4B /* LiftDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3DC300F328E362830051DC4B /* LiftCreate */ = {
+			isa = PBXGroup;
+			children = (
+				3DC300F728E367000051DC4B /* ViewModel */,
+				3DC300F428E362950051DC4B /* View */,
+			);
+			path = LiftCreate;
+			sourceTree = "<group>";
+		};
+		3DC300F428E362950051DC4B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DC300F528E362A10051DC4B /* LiftCreateView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DC300F728E367000051DC4B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3DC300F828E3670F0051DC4B /* LiftCreateViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -335,11 +365,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DC300F228E339F60051DC4B /* LiftDetailViewModel.swift in Sources */,
+				3DC300F628E362A10051DC4B /* LiftCreateView.swift in Sources */,
 				3D6E800E28DC84F70001C108 /* JustLiftApp.swift in Sources */,
 				3D5C18D528DCB63C00C6933D /* Intensity.swift in Sources */,
 				3D5C18D328DCB50E00C6933D /* IntensityListCell.swift in Sources */,
 				3D5C18CF28DCA95D00C6933D /* Condition.swift in Sources */,
 				3DC300EF28E309680051DC4B /* LiftDetailView.swift in Sources */,
+				3DC300F928E3670F0051DC4B /* LiftCreateViewModel.swift in Sources */,
 				3D7D175928DDF9CC0093FA00 /* LiftListViewModel.swift in Sources */,
 				3D5C18D128DCB2DA00C6933D /* LiftLog.swift in Sources */,
 				3D5C18CA28DCA82000C6933D /* LiftListView.swift in Sources */,
