@@ -11,6 +11,7 @@ struct LiftListView: View {
     
     //@State var list: [LiftLog] = LiftLog.list
     @StateObject var viewModel: LiftListViewModel
+    @State var isPresnting: Bool = false
     
     let layout: [GridItem] = [
         GridItem(.flexible()),
@@ -52,7 +53,7 @@ struct LiftListView: View {
                 }
                 HStack {
                     Button {
-                        print("plus btn tapped")
+                        isPresnting = true
                     } label: {
                         Image(systemName: "plus")
                             .resizable()
@@ -66,6 +67,10 @@ struct LiftListView: View {
                 }
             }
             .navigationTitle("역도왕의 길")
+        }
+        .sheet(isPresented: $isPresnting) {
+            let vm = LiftCreateViewModel(isPresented: $isPresnting)
+            LiftCreateView(viewModel: vm)
         }
     }
 }
