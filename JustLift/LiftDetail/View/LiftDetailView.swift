@@ -21,15 +21,16 @@ struct LiftDetailView: View {
                     Text(viewModel.formattedDate(dateString: liftLog.date))
                         .font(.system(size: 30, weight: .bold))
                     
-                    HStack {
                         HStack {
                             Text(liftLog.condition.emoji)
                                 .font(.system(size: 50))
                             IntensityListCell(liftLog: liftLog)
                                 .frame(height: 60)
                         }
+                    HStack {
+                        Text("훈련 느낌 : \(liftLog.condition.name)")
+                        Text("/ 훈련 강도 : \(liftLog.intensity.name)")
                     }
-                    
                     Text(liftLog.textLog)
                         .font(.system(size: 20, weight: .regular))
                 }
