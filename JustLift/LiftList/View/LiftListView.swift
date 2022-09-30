@@ -69,8 +69,8 @@ struct LiftListView: View {
             .navigationTitle("역도왕의 길")
         }
         .sheet(isPresented: $isPresnting) {
-            let vm = LiftCreateViewModel(isPresented: $isPresnting)
-            LiftCreateView(viewModel: vm)
+            let vm = LiftCreateViewModel()
+            LiftCreateView(viewModel: vm, isPresented: $isPresnting)
         }
     }
 }
