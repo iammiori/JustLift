@@ -11,9 +11,8 @@ import SwiftUI
 final class LiftCreateViewModel: ObservableObject {
     
     @Published var date: Date = Date()
-    @Published var isPresented: Binding<Bool>
-    
-    init(isPresented: Binding<Bool>) {
-        self.isPresented = isPresented
+    @Published var condition: Condition = .soso
+    @Published var intensity: Intensity = .intensity2
+    init() {
     }
 }
