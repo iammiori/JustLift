@@ -19,7 +19,7 @@ struct LiftCreateView: View {
                     .datePickerStyle(.graphical)
                 Spacer()
                 NavigationLink {
-                    InAndConInputIvew(vm: viewModel)
+                    InAndConInputView(vm: viewModel)
                 } label: {
                     Text("Next")
                 }

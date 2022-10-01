@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct InAndConInputIvew: View {
+struct InAndConInputView: View {
     
     @ObservedObject var vm: LiftCreateViewModel
     
@@ -16,15 +16,15 @@ struct InAndConInputIvew: View {
     var body: some View {
         VStack {
             Spacer()
-            Text("운동 후 느낌과\n 강도를 적어주세요")
-                .font(.title)
+            Text("운동 후 \"컨디션\"과\n \"강도\"를 체크해주세요")
+                .font(.title2)
                 .multilineTextAlignment(.center)
-                .padding(.bottom, 40)
-
+                .padding(.bottom, 35)
+            
             HStack {
                 ForEach(conditions, id:\.self) { condition in
                     Button {
-                        
+                        vm.condition = condition
                     } label: {
                         VStack(alignment: .center, spacing: 1) {
                             Text(condition.emoji)
@@ -41,10 +41,11 @@ struct InAndConInputIvew: View {
                     }
                 }
             }
+            .padding()
             HStack {
                 ForEach(intensitys, id:\.self) { intensity in
                     Button {
-                        
+                        vm.intensity = intensity
                     } label: {
                         VStack(spacing: 1) {
                             Image(systemName: intensity == vm.intensity ? intensity.clickedSFName : intensity.defaultSFName)
@@ -63,6 +64,15 @@ struct InAndConInputIvew: View {
                 }
             }
             Spacer()
+            
+            NavigationLink {
+                if vm.checkCount {
+                    LiftLogInputView()
+                }
+            } label: {
+                Text("go")
+            }
+            
         }
     }
 }
@@ -70,6 +80,6 @@ struct InAndConInputIvew: View {
 struct InAndConInputIvew_Previews: PreviewProvider {
     static var previews: some View {
         let vm = LiftCreateViewModel()
-        InAndConInputIvew(vm: vm)
+        InAndConInputView(vm: vm)
     }
 }
