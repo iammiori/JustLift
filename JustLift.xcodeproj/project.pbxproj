@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D23BF1728E6765E0079D17B /* InAndConInputIvew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D23BF1628E6765E0079D17B /* InAndConInputIvew.swift */; };
+		3D23BF1728E6765E0079D17B /* InAndConInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D23BF1628E6765E0079D17B /* InAndConInputView.swift */; };
 		3D5C18CA28DCA82000C6933D /* LiftListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C18C928DCA82000C6933D /* LiftListView.swift */; };
 		3D5C18CF28DCA95D00C6933D /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C18CE28DCA95D00C6933D /* Condition.swift */; };
 		3D5C18D128DCB2DA00C6933D /* LiftLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C18D028DCB2DA00C6933D /* LiftLog.swift */; };
@@ -24,6 +24,7 @@
 		3DC300F228E339F60051DC4B /* LiftDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC300F128E339F60051DC4B /* LiftDetailViewModel.swift */; };
 		3DC300F628E362A10051DC4B /* LiftCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC300F528E362A10051DC4B /* LiftCreateView.swift */; };
 		3DC300F928E3670F0051DC4B /* LiftCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC300F828E3670F0051DC4B /* LiftCreateViewModel.swift */; };
+		3DDB40FA28E7D681006DE2EB /* LiftLogInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDB40F928E7D681006DE2EB /* LiftLogInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D23BF1628E6765E0079D17B /* InAndConInputIvew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAndConInputIvew.swift; sourceTree = "<group>"; };
+		3D23BF1628E6765E0079D17B /* InAndConInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAndConInputView.swift; sourceTree = "<group>"; };
 		3D5C18C928DCA82000C6933D /* LiftListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftListView.swift; sourceTree = "<group>"; };
 		3D5C18CE28DCA95D00C6933D /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
 		3D5C18D028DCB2DA00C6933D /* LiftLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftLog.swift; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 		3DC300F128E339F60051DC4B /* LiftDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftDetailViewModel.swift; sourceTree = "<group>"; };
 		3DC300F528E362A10051DC4B /* LiftCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftCreateView.swift; sourceTree = "<group>"; };
 		3DC300F828E3670F0051DC4B /* LiftCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftCreateViewModel.swift; sourceTree = "<group>"; };
+		3DDB40F928E7D681006DE2EB /* LiftLogInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftLogInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,7 +226,8 @@
 			isa = PBXGroup;
 			children = (
 				3DC300F528E362A10051DC4B /* LiftCreateView.swift */,
-				3D23BF1628E6765E0079D17B /* InAndConInputIvew.swift */,
+				3D23BF1628E6765E0079D17B /* InAndConInputView.swift */,
+				3DDB40F928E7D681006DE2EB /* LiftLogInputView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -373,8 +376,9 @@
 				3D5C18D528DCB63C00C6933D /* Intensity.swift in Sources */,
 				3D5C18D328DCB50E00C6933D /* IntensityListCell.swift in Sources */,
 				3D5C18CF28DCA95D00C6933D /* Condition.swift in Sources */,
+				3DDB40FA28E7D681006DE2EB /* LiftLogInputView.swift in Sources */,
 				3DC300EF28E309680051DC4B /* LiftDetailView.swift in Sources */,
-				3D23BF1728E6765E0079D17B /* InAndConInputIvew.swift in Sources */,
+				3D23BF1728E6765E0079D17B /* InAndConInputView.swift in Sources */,
 				3DC300F928E3670F0051DC4B /* LiftCreateViewModel.swift in Sources */,
 				3D7D175928DDF9CC0093FA00 /* LiftListViewModel.swift in Sources */,
 				3D5C18D128DCB2DA00C6933D /* LiftLog.swift in Sources */,
