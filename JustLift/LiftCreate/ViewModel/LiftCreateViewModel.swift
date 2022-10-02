@@ -6,13 +6,50 @@
 //
 
 import Foundation
-import SwiftUI
+import Combine
 
 final class LiftCreateViewModel: ObservableObject {
     
+    @Published var liftLog: LiftLog
+    
     @Published var date: Date = Date()
-    @Published var condition: Condition = .soso
-    @Published var intensity: Intensity = .intensity2
-    init() {
+    @Published var condition: Condition
+    @Published var intensity: Intensity
+    @Published var checkCount: Bool
+    
+    var subscriptions = Set<AnyCancellable>()
+    
+    init(condition: Condition = .soso, intensity: Intensity = .intensity2, checkCount: Bool = true) {
+        self.condition = condition
+        self.intensity = intensity
+        self.checkCount = checkCount
+        self.liftLog = LiftLog(date: "", textLog: "", condition: condition, intensity: intensity)
+        
+        $date.sink { date in
+            //date
+            self.update(date: date)
+        }.store(in: &subscriptions)
+        
+        $condition.sink { condition in
+            self.update(condition: condition)
+        }.store(in: &subscriptions)
+        
+        $intensity.sink { intensity in
+            self.update(intensity: intensity)
+        }.store(in: &subscriptions)
+    }
+    
+    private func update(date: Date) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        self.liftLog.date = formatter.string(from: date)
+    }
+    
+    private func update(condition: Condition) {
+        self.liftLog.condition = condition
+    }
+    
+    private func update(intensity: Intensity) {
+        self.liftLog.intensity = intensity
     }
 }
