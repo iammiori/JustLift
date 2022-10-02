@@ -10,12 +10,12 @@
 
 ## 🛠 Architecture : MVVM
 <Blockquote>
-과제에서 사용하고 있는 프로젝트 구조 입니다.
+프로젝트에서 사용하고 있는 프로젝트 구조 입니다.
 </Blockquote>
 
 ## 🏋🏻‍♀️ 기술적 도전 
 <Blockquote>
-과제를 진행하면서 시도한 기술적 도전을 소개합니다.
+프로젝트를 진행하면서 시도한 기술적 도전을 소개합니다.
 </Blockquote>
 
 ### 🚜 Combine
