@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct LiftLogInputView: View {
+    
+    @ObservedObject var vm: LiftCreateViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("hello")
     }
 }
 
 struct LiftLogInputView_Previews: PreviewProvider {
     static var previews: some View {
-        LiftLogInputView()
+        let vm: LiftCreateViewModel = LiftCreateViewModel()
+        LiftLogInputView(vm: vm)
     }
 }

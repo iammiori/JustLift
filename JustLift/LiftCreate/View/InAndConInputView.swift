@@ -67,7 +67,7 @@ struct InAndConInputView: View {
             
             NavigationLink {
                 if vm.checkCount {
-                    LiftLogInputView()
+                    LiftLogInputView(vm: vm)
                 }
             } label: {
                 Text("go")
