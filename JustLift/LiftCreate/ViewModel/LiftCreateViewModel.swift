@@ -15,6 +15,7 @@ final class LiftCreateViewModel: ObservableObject {
     @Published var date: Date = Date()
     @Published var condition: Condition
     @Published var intensity: Intensity
+    @Published var logText: String = ""
     @Published var checkCount: Bool
     
     var subscriptions = Set<AnyCancellable>()
@@ -37,6 +38,10 @@ final class LiftCreateViewModel: ObservableObject {
         $intensity.sink { intensity in
             self.update(intensity: intensity)
         }.store(in: &subscriptions)
+        
+        $logText.sink { logText in
+            self.update(logText: logText)
+        }.store(in: &subscriptions)
     }
     
     private func update(date: Date) {
@@ -51,5 +56,9 @@ final class LiftCreateViewModel: ObservableObject {
     
     private func update(intensity: Intensity) {
         self.liftLog.intensity = intensity
+    }
+    
+    private func update(logText: String) {
+        self.liftLog.textLog = logText
     }
 }
