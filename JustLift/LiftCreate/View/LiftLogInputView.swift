@@ -12,7 +12,11 @@ struct LiftLogInputView: View {
     @ObservedObject var vm: LiftCreateViewModel
     
     var body: some View {
-        Text("hello")
+        VStack {
+            TextEditor(text: $vm.logText)
+                .border(.blue.opacity(0.2), width: 2)
+        }
+        .padding()
     }
 }
 
