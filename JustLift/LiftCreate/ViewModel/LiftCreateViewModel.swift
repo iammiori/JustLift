@@ -61,4 +61,8 @@ final class LiftCreateViewModel: ObservableObject {
     private func update(logText: String) {
         self.liftLog.textLog = logText
     }
+    
+    func finishWriting(completion: @escaping () -> Void) {
+        guard liftLog.date.isEmpty == false else { return }
+    }
 }
