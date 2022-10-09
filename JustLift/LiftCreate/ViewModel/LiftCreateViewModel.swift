@@ -64,5 +64,6 @@ final class LiftCreateViewModel: ObservableObject {
     
     func finishWriting(completion: @escaping () -> Void) {
         guard liftLog.date.isEmpty == false else { return }
+        completion()
     }
 }
