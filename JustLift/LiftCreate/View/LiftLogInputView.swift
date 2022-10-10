@@ -17,6 +17,20 @@ struct LiftLogInputView: View {
             TextEditor(text: $vm.logText)
                 .focused($isfocused)
                 .border(.blue.opacity(0.2), width: 2)
+            Button {
+                vm.finishWriting {
+                    //창 닫기
+                    UIApplication.shared.connectedScenes
+                    .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
+                    .first { $0.isKeyWindow }?
+                    .rootViewController?.dismiss(animated: true)
+                    
+                    //UIApplication.shared.windows.first?.rootViewController?.dismiss(animated: true)
+                }
+            } label: {
+                Text("완료")
+            }
+
         }
         .padding()
         .onAppear {
