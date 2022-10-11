@@ -3,7 +3,7 @@
 
 
 ### google push
-GoogleService-Info.plist
+./GoogleService-Info.plist
 
 ### macOS ###
 # General
