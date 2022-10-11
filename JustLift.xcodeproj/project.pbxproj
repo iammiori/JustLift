@@ -25,6 +25,8 @@
 		3DC300F628E362A10051DC4B /* LiftCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC300F528E362A10051DC4B /* LiftCreateView.swift */; };
 		3DC300F928E3670F0051DC4B /* LiftCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC300F828E3670F0051DC4B /* LiftCreateViewModel.swift */; };
 		3DDB40FA28E7D681006DE2EB /* LiftLogInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDB40F928E7D681006DE2EB /* LiftLogInputView.swift */; };
+		3DDE840928F5AFE200EB98D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DDE840828F5AFE200EB98D7 /* GoogleService-Info.plist */; };
+		3DDE840C28F5B62C00EB98D7 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 3DDE840B28F5B62C00EB98D7 /* FirebaseMessaging */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,7 @@
 		3DC300F528E362A10051DC4B /* LiftCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftCreateView.swift; sourceTree = "<group>"; };
 		3DC300F828E3670F0051DC4B /* LiftCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftCreateViewModel.swift; sourceTree = "<group>"; };
 		3DDB40F928E7D681006DE2EB /* LiftLogInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftLogInputView.swift; sourceTree = "<group>"; };
+		3DDE840828F5AFE200EB98D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DDE840C28F5B62C00EB98D7 /* FirebaseMessaging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +148,7 @@
 		3D6E800C28DC84F70001C108 /* JustLift */ = {
 			isa = PBXGroup;
 			children = (
+				3DDE840828F5AFE200EB98D7 /* GoogleService-Info.plist */,
 				3DC300F328E362830051DC4B /* LiftCreate */,
 				3D5C18C728DCA73700C6933D /* LiftList */,
 				3D5C18C828DCA74400C6933D /* LiftDetail */,
@@ -256,6 +261,9 @@
 			dependencies = (
 			);
 			name = JustLift;
+			packageProductDependencies = (
+				3DDE840B28F5B62C00EB98D7 /* FirebaseMessaging */,
+			);
 			productName = JustLift;
 			productReference = 3D6E800A28DC84F70001C108 /* JustLift.app */;
 			productType = "com.apple.product-type.application";
@@ -328,6 +336,9 @@
 				Base,
 			);
 			mainGroup = 3D6E800128DC84F70001C108;
+			packageReferences = (
+				3DDE840A28F5B62C00EB98D7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 3D6E800B28DC84F70001C108 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -346,6 +357,7 @@
 			files = (
 				3D6E801528DC84F80001C108 /* Preview Assets.xcassets in Resources */,
 				3D6E801228DC84F80001C108 /* Assets.xcassets in Resources */,
+				3DDE840928F5AFE200EB98D7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,7 +566,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.miori.dev-ios.JustLift";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miori.dev-ios.JustLift-dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -583,7 +595,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.miori.dev-ios.JustLift";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miori.dev-ios.JustLift-dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -707,6 +719,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3DDE840A28F5B62C00EB98D7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 9.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3DDE840B28F5B62C00EB98D7 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DDE840A28F5B62C00EB98D7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3D6E800228DC84F70001C108 /* Project object */;
 }
