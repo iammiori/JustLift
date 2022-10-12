@@ -25,8 +25,9 @@
 		3DC300F628E362A10051DC4B /* LiftCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC300F528E362A10051DC4B /* LiftCreateView.swift */; };
 		3DC300F928E3670F0051DC4B /* LiftCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC300F828E3670F0051DC4B /* LiftCreateViewModel.swift */; };
 		3DDB40FA28E7D681006DE2EB /* LiftLogInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDB40F928E7D681006DE2EB /* LiftLogInputView.swift */; };
-		3DDE840928F5AFE200EB98D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DDE840828F5AFE200EB98D7 /* GoogleService-Info.plist */; };
+		3DDE840928F5AFE200EB98D7 /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DDE840828F5AFE200EB98D7 /* GoogleService-Info-Dev.plist */; };
 		3DDE840C28F5B62C00EB98D7 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 3DDE840B28F5B62C00EB98D7 /* FirebaseMessaging */; };
+		3DDE841028F673F100EB98D7 /* GoogleService-Info-Prod.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DDE840F28F673F100EB98D7 /* GoogleService-Info-Prod.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +69,9 @@
 		3DC300F528E362A10051DC4B /* LiftCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftCreateView.swift; sourceTree = "<group>"; };
 		3DC300F828E3670F0051DC4B /* LiftCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftCreateViewModel.swift; sourceTree = "<group>"; };
 		3DDB40F928E7D681006DE2EB /* LiftLogInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftLogInputView.swift; sourceTree = "<group>"; };
-		3DDE840828F5AFE200EB98D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3DDE840828F5AFE200EB98D7 /* GoogleService-Info-Dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Dev.plist"; sourceTree = "<group>"; };
+		3DDE840D28F6535A00EB98D7 /* JustLift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JustLift.entitlements; sourceTree = "<group>"; };
+		3DDE840F28F673F100EB98D7 /* GoogleService-Info-Prod.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Prod.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +151,8 @@
 		3D6E800C28DC84F70001C108 /* JustLift */ = {
 			isa = PBXGroup;
 			children = (
-				3DDE840828F5AFE200EB98D7 /* GoogleService-Info.plist */,
+				3DDE840E28F6731D00EB98D7 /* Firebase */,
+				3DDE840D28F6535A00EB98D7 /* JustLift.entitlements */,
 				3DC300F328E362830051DC4B /* LiftCreate */,
 				3D5C18C728DCA73700C6933D /* LiftList */,
 				3D5C18C828DCA74400C6933D /* LiftDetail */,
@@ -245,6 +249,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		3DDE840E28F6731D00EB98D7 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				3DDE840828F5AFE200EB98D7 /* GoogleService-Info-Dev.plist */,
+				3DDE840F28F673F100EB98D7 /* GoogleService-Info-Prod.plist */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -255,6 +268,7 @@
 				3D6E800628DC84F70001C108 /* Sources */,
 				3D6E800728DC84F70001C108 /* Frameworks */,
 				3D6E800828DC84F70001C108 /* Resources */,
+				3DDE841128F6746A00EB98D7 /* Firebase Info plist */,
 			);
 			buildRules = (
 			);
@@ -357,7 +371,8 @@
 			files = (
 				3D6E801528DC84F80001C108 /* Preview Assets.xcassets in Resources */,
 				3D6E801228DC84F80001C108 /* Assets.xcassets in Resources */,
-				3DDE840928F5AFE200EB98D7 /* GoogleService-Info.plist in Resources */,
+				3DDE841028F673F100EB98D7 /* GoogleService-Info-Prod.plist in Resources */,
+				3DDE840928F5AFE200EB98D7 /* GoogleService-Info-Dev.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +391,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DDE841128F6746A00EB98D7 /* Firebase Info plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Firebase Info plist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#파이어베이스 인포 리스트 올리기 개발, 운영 \nPATH_TO_GOOGLE_PLISTS=\"${PROJECT_DIR}/${PRODUCT_NAME}/Firebase\"\n\ncase \"${CONFIGURATION}\" in\n  \"Debug\" )\ncp -r \"$SRCROOT/${PRODUCT_NAME}/Firebase/GoogleService-Info-Dev.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\" ;;\n  \"Release\" )\ncp -r \"$SRCROOT/${PRODUCT_NAME}/Firebase/GoogleService-Info-Prod.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\" ;;\n*)\n;;\nesac\n복사\nShell\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3D6E800628DC84F70001C108 /* Sources */ = {
@@ -548,14 +584,17 @@
 		3D6E802F28DC84F80001C108 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon.dev;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUNDLE_ID_SUFFIX = "-dev";
+				CODE_SIGN_ENTITLEMENTS = JustLift/JustLift.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"JustLift/Preview Content\"";
 				DEVELOPMENT_TEAM = GLQQLN3R4U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "디버그";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -579,6 +618,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUNDLE_ID_SUFFIX = "";
+				CODE_SIGN_ENTITLEMENTS = JustLift/JustLift.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"JustLift/Preview Content\"";
@@ -595,7 +636,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.miori.dev-ios.JustLift-dev";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.miori.dev-ios.JustLift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
