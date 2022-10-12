@@ -66,7 +66,13 @@ struct LiftListView: View {
                     .cornerRadius(40)
                 }
             }
-            .navigationTitle("역도왕의 길")
+            .onAppear(perform: {
+                #if DEBUG
+                viewModel.naviTitle = "역도왕의길 dev"
+                #else
+                #endif
+            })
+            .navigationTitle(viewModel.naviTitle)
         }
         .sheet(isPresented: $isPresnting) {
             let vm = LiftCreateViewModel()

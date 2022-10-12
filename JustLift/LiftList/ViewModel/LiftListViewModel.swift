@@ -11,6 +11,7 @@ final class LiftListViewModel: ObservableObject {
     //MARK: TO Do : 월 구분
     @Published var liftList: [LiftLog] = LiftLog.list
     @Published var listDic: [String: [LiftLog]] = [:]
+    @Published var naviTitle: String = "역도왕의 길"
     
     init() {
         self.listDic = Dictionary(grouping: self.liftList, by: { $0.monthlyIdentifier })
