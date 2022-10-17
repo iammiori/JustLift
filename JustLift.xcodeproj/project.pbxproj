@@ -20,6 +20,8 @@
 		3D6E802928DC84F80001C108 /* JustLiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E802828DC84F80001C108 /* JustLiftUITests.swift */; };
 		3D6E802B28DC84F80001C108 /* JustLiftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6E802A28DC84F80001C108 /* JustLiftUITestsLaunchTests.swift */; };
 		3D7D175928DDF9CC0093FA00 /* LiftListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D175828DDF9CC0093FA00 /* LiftListViewModel.swift */; };
+		3DBD461F28FD91FA00D753A9 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBD461E28FD91FA00D753A9 /* Storage.swift */; };
+		3DBD462128FD921A00D753A9 /* LiftlogStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBD462028FD921A00D753A9 /* LiftlogStorage.swift */; };
 		3DC300EF28E309680051DC4B /* LiftDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC300EE28E309680051DC4B /* LiftDetailView.swift */; };
 		3DC300F228E339F60051DC4B /* LiftDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC300F128E339F60051DC4B /* LiftDetailViewModel.swift */; };
 		3DC300F628E362A10051DC4B /* LiftCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC300F528E362A10051DC4B /* LiftCreateView.swift */; };
@@ -64,6 +66,8 @@
 		3D6E802828DC84F80001C108 /* JustLiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustLiftUITests.swift; sourceTree = "<group>"; };
 		3D6E802A28DC84F80001C108 /* JustLiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustLiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3D7D175828DDF9CC0093FA00 /* LiftListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftListViewModel.swift; sourceTree = "<group>"; };
+		3DBD461E28FD91FA00D753A9 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		3DBD462028FD921A00D753A9 /* LiftlogStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftlogStorage.swift; sourceTree = "<group>"; };
 		3DC300EE28E309680051DC4B /* LiftDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftDetailView.swift; sourceTree = "<group>"; };
 		3DC300F128E339F60051DC4B /* LiftDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftDetailViewModel.swift; sourceTree = "<group>"; };
 		3DC300F528E362A10051DC4B /* LiftCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftCreateView.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 				3D5C18C728DCA73700C6933D /* LiftList */,
 				3D5C18C828DCA74400C6933D /* LiftDetail */,
 				3D5C18CB28DCA90F00C6933D /* Model */,
+				3DBD461D28FD91C800D753A9 /* Storage */,
 				3D6E800D28DC84F70001C108 /* JustLiftApp.swift */,
 				3D6E801128DC84F80001C108 /* Assets.xcassets */,
 				3D6E801328DC84F80001C108 /* Preview Content */,
@@ -204,6 +209,15 @@
 				3D7D175828DDF9CC0093FA00 /* LiftListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3DBD461D28FD91C800D753A9 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				3DBD461E28FD91FA00D753A9 /* Storage.swift */,
+				3DBD462028FD921A00D753A9 /* LiftlogStorage.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		3DC300ED28E309510051DC4B /* View */ = {
@@ -419,11 +433,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DC300F228E339F60051DC4B /* LiftDetailViewModel.swift in Sources */,
+				3DBD461F28FD91FA00D753A9 /* Storage.swift in Sources */,
 				3DC300F628E362A10051DC4B /* LiftCreateView.swift in Sources */,
 				3D6E800E28DC84F70001C108 /* JustLiftApp.swift in Sources */,
 				3D5C18D528DCB63C00C6933D /* Intensity.swift in Sources */,
 				3D5C18D328DCB50E00C6933D /* IntensityListCell.swift in Sources */,
 				3D5C18CF28DCA95D00C6933D /* Condition.swift in Sources */,
+				3DBD462128FD921A00D753A9 /* LiftlogStorage.swift in Sources */,
 				3DDB40FA28E7D681006DE2EB /* LiftLogInputView.swift in Sources */,
 				3DC300EF28E309680051DC4B /* LiftDetailView.swift in Sources */,
 				3D23BF1728E6765E0079D17B /* InAndConInputView.swift in Sources */,
