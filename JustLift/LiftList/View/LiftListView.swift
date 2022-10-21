@@ -11,7 +11,7 @@ struct LiftListView: View {
     
     //@State var list: [LiftLog] = LiftLog.list
     @StateObject var viewModel: LiftListViewModel
-    @State var isPresnting: Bool = false
+    @State private var isPresnting: Bool = false
     
     let layout: [GridItem] = [
         GridItem(.flexible()),
@@ -83,6 +83,6 @@ struct LiftListView: View {
 
 struct LiftListView_Previews: PreviewProvider {
     static var previews: some View {
-        LiftListView(viewModel: LiftListViewModel())
+        LiftListView(viewModel: LiftListViewModel(storage: LiftlogStorage()))
     }
 }

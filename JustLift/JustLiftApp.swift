@@ -15,7 +15,8 @@ struct JustLiftApp: App {
     
     var body: some Scene {
         WindowGroup {
-            let vm = LiftListViewModel()
+            let storage: LiftlogStorage = LiftlogStorage()
+            let vm = LiftListViewModel(storage: storage)
             LiftListView(viewModel: vm)
         }
     }
