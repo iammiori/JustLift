@@ -78,6 +78,9 @@ struct LiftListView: View {
             let vm = LiftCreateViewModel()
             LiftCreateView(viewModel: vm, isPresented: $isPresnting)
         }
+        .onAppear {
+            viewModel.fetch()
+        }
     }
 }
 
