@@ -41,7 +41,7 @@ struct LiftLogInputView: View {
 
 struct LiftLogInputView_Previews: PreviewProvider {
     static var previews: some View {
-        let vm: LiftCreateViewModel = LiftCreateViewModel()
+        let vm: LiftCreateViewModel = LiftCreateViewModel(liftLogs: .constant(LiftLog.list))
         LiftLogInputView(vm: vm)
     }
 }
