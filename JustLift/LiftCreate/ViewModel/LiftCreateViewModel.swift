@@ -7,9 +7,11 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 final class LiftCreateViewModel: ObservableObject {
     
+    @Published var liftLogs: Binding<[LiftLog]>
     @Published var liftLog: LiftLog
     
     @Published var date: Date = Date()
@@ -20,11 +22,12 @@ final class LiftCreateViewModel: ObservableObject {
     
     var subscriptions = Set<AnyCancellable>()
     
-    init(condition: Condition = .soso, intensity: Intensity = .intensity2, checkCount: Bool = true) {
+    init(condition: Condition = .soso, intensity: Intensity = .intensity2, checkCount: Bool = true, liftLogs: Binding<[LiftLog]>) {
         self.condition = condition
         self.intensity = intensity
         self.checkCount = checkCount
         self.liftLog = LiftLog(date: "", textLog: "", condition: condition, intensity: intensity)
+        self.liftLogs = liftLogs
         
         $date.sink { date in
             //date
@@ -64,6 +67,7 @@ final class LiftCreateViewModel: ObservableObject {
     
     func finishWriting(completion: @escaping () -> Void) {
         guard liftLog.date.isEmpty == false else { return }
+        liftLogs.wrappedValue.append(liftLog)
         completion()
     }
 }
