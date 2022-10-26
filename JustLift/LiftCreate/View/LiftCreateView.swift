@@ -31,7 +31,7 @@ struct LiftCreateView: View {
 
 struct LiftCreateView_Previews: PreviewProvider {
     static var previews: some View {
-        let vm = LiftCreateViewModel()
+        let vm = LiftCreateViewModel(liftLogs: .constant(LiftLog.list))
         LiftCreateView(viewModel: vm, isPresented: .constant(false))
     }
 }

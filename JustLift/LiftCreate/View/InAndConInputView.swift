@@ -79,7 +79,7 @@ struct InAndConInputView: View {
 
 struct InAndConInputIvew_Previews: PreviewProvider {
     static var previews: some View {
-        let vm = LiftCreateViewModel()
+        let vm = LiftCreateViewModel(liftLogs: .constant(LiftLog.list))
         InAndConInputView(vm: vm)
     }
 }

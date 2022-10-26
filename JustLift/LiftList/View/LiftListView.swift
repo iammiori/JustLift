@@ -75,7 +75,7 @@ struct LiftListView: View {
             .navigationTitle(viewModel.naviTitle)
         }
         .sheet(isPresented: $isPresnting) {
-            let vm = LiftCreateViewModel()
+            let vm = LiftCreateViewModel(liftLogs: $viewModel.liftList)
             LiftCreateView(viewModel: vm, isPresented: $isPresnting)
         }
         .onAppear {
