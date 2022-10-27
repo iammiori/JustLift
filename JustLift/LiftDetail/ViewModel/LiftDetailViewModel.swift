@@ -6,8 +6,18 @@
 //
 
 import Foundation
+import SwiftUI
 
-final class LiftDetailViewModel {
+final class LiftDetailViewModel: ObservableObject {
+    
+    @Published var liftLogs: Binding<[LiftLog]>
+    @Published var liftLog: LiftLog
+    
+    init(liftLogs: Binding<[LiftLog]>, liftLog: LiftLog) {
+        self.liftLogs = liftLogs
+        self.liftLog = liftLog
+    }
+    
     func formattedDate(dateString: String) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
