@@ -33,7 +33,9 @@ struct LiftListView: View {
                                 ForEach(orderedItmes) { item in
                                     
                                     NavigationLink {
-                                        LiftDetailView(liftLog: item)
+                                       // LiftDetailView(liftLog: item)
+                                        let vm = LiftDetailViewModel(liftLogs: $viewModel.liftList, liftLog: item)
+                                        LiftDetailView( viewModel: vm)
                                     } label: {
                                         HStack {
                                             Text(item.condition.emoji)
