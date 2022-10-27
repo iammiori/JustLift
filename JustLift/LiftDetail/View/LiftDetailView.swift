@@ -11,27 +11,28 @@ struct LiftDetailView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
-    var liftLog: LiftLog
-    let viewModel: LiftDetailViewModel = LiftDetailViewModel()
+    //var liftLog: LiftLog
+    //let viewModel: LiftDetailViewModel = LiftDetailViewModel()
+    @StateObject var viewModel: LiftDetailViewModel
     
     var body: some View {
         VStack {
             ScrollView {
                 VStack(spacing: 50) {
-                    Text(viewModel.formattedDate(dateString: liftLog.date))
+                    Text(viewModel.formattedDate(dateString: viewModel.liftLog.date))
                         .font(.system(size: 30, weight: .bold))
                     
                         HStack {
-                            Text(liftLog.condition.emoji)
+                            Text(viewModel.liftLog.condition.emoji)
                                 .font(.system(size: 50))
-                            IntensityListCell(liftLog: liftLog)
+                            IntensityListCell(liftLog: viewModel.liftLog)
                                 .frame(height: 60)
                         }
                     HStack {
-                        Text("훈련 느낌 : \(liftLog.condition.name)")
-                        Text("/ 훈련 강도 : \(liftLog.intensity.name)")
+                        Text("훈련 느낌 : \(viewModel.liftLog.condition.name)")
+                        Text("/ 훈련 강도 : \(viewModel.liftLog.intensity.name)")
                     }
-                    Text(liftLog.textLog)
+                    Text(viewModel.liftLog.textLog)
                         .font(.system(size: 20, weight: .regular))
                 }
                 .foregroundColor(colorScheme == .dark ? .white : .black)
@@ -55,6 +56,7 @@ struct LiftDetailView: View {
 
 struct LiftDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        LiftDetailView(liftLog: LiftLog.list.first!)
+        let vm = LiftDetailViewModel(liftLogs: .constant(LiftLog.list), liftLog: LiftLog.list.first!)
+        LiftDetailView(viewModel: vm)
     }
 }
