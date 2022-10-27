@@ -6,7 +6,7 @@
 ## ⚙️ 개발환경
 - Xcode: 14.0
 - Swift: 5.7
-- iOS: 13.0 ~ 
+- iOS: 14.0 + (@StateObject 사용으로 iOS 14.0 이상)
 
 ## 📁 구조
 - Firebase/ : GoogleService-Info-Prod.plist, GoogleService-Info-Dev.plist 파일이 있으며, .gitignore 에 추가해놓았습니다.
@@ -31,6 +31,9 @@
 ### final 키워드
 - 성능 향상을 위해 상속 되지 않는 class 에 final 키워드를 붙였습니다.
 - 키워드를 붙이면, Static Dispatch가 사용이 되어, 컴파일에 결정이 되고 런타임에 그대로 실행이 되어 성능이 보다 향상 됩니다.
+
+### @StateObject
+- StateObject로 생성된 객체는 View의 life cycle에 상관없이, SwiftUI가 메모리에 별도 관리하기 때문에 데이터가 일관됩니다.
 
 ## 🏋🏻‍♀️ 기술적 도전 
 <Blockquote>
