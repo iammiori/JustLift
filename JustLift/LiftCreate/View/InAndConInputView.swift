@@ -9,7 +9,8 @@ import SwiftUI
 
 struct InAndConInputView: View {
     
-    @ObservedObject var vm: LiftCreateViewModel
+    //@ObservedObject var vm: LiftCreateViewModel
+    @StateObject var vm: LiftCreateViewModel
     
     let conditions: [Condition] = Condition.allCases
     let intensitys: [Intensity] = Intensity.allCases
