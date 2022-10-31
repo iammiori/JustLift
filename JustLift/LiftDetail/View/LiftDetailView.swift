@@ -51,6 +51,7 @@ struct LiftDetailView: View {
                 }
             }
         }
+        .frame(maxWidth: .infinity)
     }
 }
 
