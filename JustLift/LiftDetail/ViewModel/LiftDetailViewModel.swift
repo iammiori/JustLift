@@ -27,4 +27,8 @@ final class LiftDetailViewModel: ObservableObject {
         formatter.dateFormat = "yyyy.MMM.d EEE"
         return formatter.string(from: date!)
     }
+    
+    func delete() {
+        liftLogs.wrappedValue = liftLogs.wrappedValue.filter { $0.id != liftLog.id }
+    }
 }
