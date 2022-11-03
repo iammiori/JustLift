@@ -41,7 +41,8 @@ struct LiftDetailView: View {
             
             HStack {
                 Button {
-                    print("delete tapped")
+                    //print("delete tapped")
+                    viewModel.delete()
                 } label: {
                     Image(systemName: "trash")
                         .renderingMode(.template)
